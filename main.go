@@ -14,7 +14,7 @@ func main() {
 	flag.Parse()
 	content, _ := ioutil.ReadFile(filepath)
 	reg1 := regexp.MustCompile(`flag.*}`)
-	result1 := reg1.FindAllStringSubmatch(string(content), -1)
+	result1 := reg1.FindAllString(string(content), -1)
 	//fmt.Println(result1)
 	for _, value := range result1 {
 		fmt.Println(value)
